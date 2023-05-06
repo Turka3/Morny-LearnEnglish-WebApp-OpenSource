@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mory</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/320d3bcaba.js" crossorigin="anonymous"></script>
+
+    <style>
+      /* Butonların stilini belirleyen CSS kodları */
+      .button {
+        background-color: #041d34;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 6.5px;
+        cursor: pointer;
+      }
+      .button-left {
+        float: left;
+      }
+      .button-right {
+        float: left;
+      }
+      .button:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <button class="dark-theme" title="Koyu Tema">
+        <i class="fa-sharp fa-solid fa-moon"></i>
+      </button>
+  
+      <style>
+        .dark-mode {
+          background-color: #333;
+          color: #fff;
+        }
+  
+        .dark-theme {
+          border-radius: 6px;
+          background-color: #fff;
+          color: black;
+          text-align: center;
+          cursor: pointer;
+          float: right;
+        }
+      </style>
+  
+      <script>
+        const darkModeToggle = document.querySelector(".dark-theme");
+        const body = document.body;
+  
+        darkModeToggle.addEventListener("click", () => {
+          body.classList.toggle("dark-mode");
+        });
+      </script>
+
+    <div>
+      <a href="index.html"><h1 id="header-title-main-page">Mory</h1></a>
+    </div>
+
+    <h1>Aktiviteler:</h1>
+
+    <!-- Butonlar -->
+    <a href="metin.html"><button class="button button-left">Metin Oku</button></a>
+    <button class="button button-left">Metin Dinle</button>
+    <button class="button button-right">Kelime Öğren</button>
+
+    <div class="slider-container" style="padding: 0 20px 20px 0">
+      <div class="slide active">
+        <img src="img/editing-1756958_960_720.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="img/key-5105878_960_720.jpg" alt="Slide 2" />
+      </div>
+      <div class="slide">
+        <img src="img/flags-38754_960_720.png" alt="Slide 3" />
+      </div>
+
+      <div class="slider-nav">
+        <button
+          class="slider-nav-button active"
+          onclick="changeSlide(0)"
+        ></button>
+        <button class="slider-nav-button" onclick="changeSlide(1)"></button>
+        <button class="slider-nav-button" onclick="changeSlide(2)"></button>
+      </div>
+    </div>
+
+    <style>
+      .slider-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin: 100px auto;
+        overflow: hidden;
+      }
+
+      .slide {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slider-nav {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .slider-nav button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      .slider-nav button.active,
+      .slider-nav button:hover {
+        background-color: #bfbfbf;
+      }
+
+      @media screen and (max-width: 768px) {
+        .slider-container {
+          height: 200px;
+        }
+
+        .slider-nav {
+          height: 40px;
+        }
+
+        .slider-nav button {
+          width: 8px;
+          height: 8px;
+          margin: 0 3px;
+        }
+      }
+    </style>
+
+    <script>
+      // slider resimlerinin bulunduğu HTML elementlerini seçiyoruz
+      const slides = document.querySelectorAll(".slide");
+
+      // slider butonlarının bulunduğu HTML elementlerini seçiyoruz
+      const sliderNavButtons = document.querySelectorAll(".slider-nav-button");
+
+      // hangi sliden başlayacağımızı tutan değişkeni tanımlıyoruz
+      let currentSlideIndex = 0;
+
+      // sliderı otomatik çalışacak şekilde ayarlıyoruz
+      let sliderInterval = setInterval(() => {
+        // mevcut sliden bir sonraki slide'a geçiyoruz
+        goToSlide(currentSlideIndex + 1);
+      }, 3000);
+
+      // sliderın akışını kontrol eden fonksiyon
+      function goToSlide(slideIndex) {
+        // eğer son slide'daysak ilk slide'a döneriz
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        }
+        // eğer ilk slide'daysak son slide'a gideriz
+        else if (slideIndex < 0) {
+          slideIndex = slides.length - 1;
+        }
+
+        // mevcut slidi görünmez yap
+        slides[currentSlideIndex].classList.remove("active");
+        // yeni slidi görünür yap
+        slides[slideIndex].classList.add("active");
+
+        // slider butonlarından mevcut slide'a ait olanı aktif durumdan çıkar
+        sliderNavButtons[currentSlideIndex].classList.remove("active");
+        // slider butonlarından yeni slide'a ait olanı aktif duruma getir
+        sliderNavButtons[slideIndex].classList.add("active");
+
+        // mevcut slidi güncelle
+        currentSlideIndex = slideIndex;
+      }
+
+      // slider butonlarına tıklanınca ilgili slayta gitmek için event listener ekliyoruz
+      sliderNavButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          // sliderın otomatik çalışan zamanlayıcısını sıfırla
+          clearInterval(sliderInterval);
+          // ilgili slide'a git
+          goToSlide(index);
+          // sliderın otomatik çalışacak şekilde tekrar ayarla
+          sliderInterval = setInterval(() => {
+            goToSlide(currentSlideIndex + 1);
+          }, 3000);
+        });
+      });
+    </script>
+  </body>
+</html>

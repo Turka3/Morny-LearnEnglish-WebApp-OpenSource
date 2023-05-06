@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mory</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/320d3bcaba.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <button class="dark-theme" title="Koyu Tema">
+      <i class="fa-sharp fa-solid fa-moon"></i>
+    </button>
+
+    <style>
+      .dark-mode {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .dark-theme {
+        border-radius: 5px;
+        background-color: #fff;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        height: 20px;
+        width: 30px;
+        float: right;
+      }
+    </style>
+
+    <script>
+      const darkModeToggle = document.querySelector(".dark-theme");
+      const body = document.body;
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+      });
+    </script>
+
+      <a href="index.html"><h1 id="header-title-main-page">Mory</h1></a>
+
+    <p id="passage-main" title="Mory ile ingilizce pratik yap!">
+      Mory ile ingilizce pratik yap!
+    </p>
+
+    <!-- HTML !-->
+    <a href="practice.html">
+      <button class="button-9" role="button" title="Pratik yapmaya başla!">
+        Pratik Yap!
+      </button>
+    </a>
+
+    <p id="paragraf">
+      Mory, İngilizce öğrenmek isteyen herkes için mükemmel bir kaynak.
+      Sitemizde yer alan zengin içerikler sayesinde, okuma ve kelime bilgisi
+      becerilerinizi geliştirebilirsiniz. Mory'nin en önemli özelliklerinden
+      biri, metin okuma aktiviteleridir. Yüzlerce özgün metin, farklı
+      seviyelerdeki öğrencilerin ihtiyaçlarına göre hazırlanmıştır. Bu sayede,
+      İngilizce okuma becerilerinizi geliştirebilirsiniz. Ayrıca, kelime
+      dağarcığınızı genişletmek için metinlerde yer alan kelimelerin anlamlarını
+      öğrenebilirsiniz. Mory, dinleme aktiviteleri ile de İngilizce anlama
+      becerilerinizi geliştirmenize yardımcı olur. Dinleme aktiviteleri, öğrenme
+      sürecini daha etkili ve keyifli hale getirir. Mory, öğrencilerin İngilizce
+      öğrenme yolculuğunda onlara eşlik etmektedir. İster İngilizce öğrenmeye
+      yeni başlamış bir öğrenci olun, isterse de İngilizce konuşma
+      becerilerinizi geliştirmek isteyen bir öğrenci, Mory sizin için doğru
+      adres. Hemen Mory'ye katılın ve İngilizce öğrenmenin keyfini çıkarın!
+    </p>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3 title="Hakkımızda">Hakkımızda</h3>
+          <p>
+            Mory, İngilizce öğrenmek isteyen herkes için hazırlanmış bir
+            platformdur. Sitemizde, özgün içeriklerle dolu aktivitelerle
+            İngilizce okuma, dinleme ve kelime bilgisi becerilerinizi
+            geliştirebilirsiniz.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 title="Bize Ulaşın">Bize Ulaşın</h3>
+          <ul>
+            <li>
+              <a href="mailto:genctechnology@gmail.com" target="_blank"
+                >genctechnology@gmail.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+905367231820" target="_blank">+90 536 723 18 20</a>
+            </li>
+            <li>
+              <a href="https://genctech-open-source.vercel.app/" target="_blank"
+                >Biz Kimiz?</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 title="Bizi Takip Edin">Bizi Takip Edin</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/people/T%C3%BCrker-Albayrak/100089849881164/"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/genc_tech" target="_blank"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/genctech_/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Mory - Tüm Hakları Saklıdır</p>
+      </div>
+    </footer>
+
+    <style>
+      /* Footer stil kodları */
+      footer {
+        width: 100%;
+        margin-top: 10px;
+        background-color: #c0b9b9;
+        padding: 20px 0;
+      }
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .footer-col {
+        text-align: center;
+        flex: 1;
+        margin-right: 1px;
+      }
+      .footer-col:last-of-type {
+        margin-right: 0;
+      }
+      h3 {
+        color: #041d34;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 1px;
+      }
+      p,
+      ul {
+        color: rgb(27, 1, 1);
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 2px;
+      }
+      a {
+        color: #041d34;
+        text-decoration: none;
+      }
+      .footer-bottom {
+        background-color: #c0b9b9;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      .footer-bottom p {
+        margin: 1px;
+      }
+    </style>
+  </body>
+</html>
