@@ -49,62 +49,119 @@
 
     <h1>Vocabulary</h1>
 
-    <p>
-        Absurd - wildly unreasonable or illogical<br>
-        Benevolent - well meaning and kindly<br>
-        Clandestine - kept secret or done secretly<br>
-        Diligent - having or showing care and conscientiousness in one's work or duties<br>
-        Elusive - difficult to find, catch, or achieve<br>
-        Fervent - having or showing intense feeling or enthusiasm<br>
-        Gracious - courteous, kind, and pleasant<br>
-        Haughty - arrogantly superior and disdainful<br>
-        Impetuous - acting or done quickly and without thought or care<br>
-        Jovial - cheerful and friendly<br>
-        Kinetic - relating to or resulting from motion<br>
-        Luminous - full of or shedding light; bright or shining, especially in the dark<br>
-        Magnitude - the great size or extent of something<br>
-        Nascent - just coming into existence and beginning to display signs of future potential<br>
-        Obscure - not discovered or known about; uncertain<br>
-        Pensive - engaged in deep or serious thought<br>
-        Quell - put an end to (a rebellion or other disorder), typically by the use of force<br>
-        Resilient - able to withstand or recover quickly from difficult conditions<br>
-        Sanguine - optimistic or positive, especially in an apparently bad or difficult situation<br>
-        Tenacious - tending to keep a firm hold of something; clinging or adhering closely<br>
-        Ubiquitous - present, appearing, or found everywhere<br>
-        Venerable - accorded a great deal of respect, especially because of age, wisdom, or character<br>
-        Whimsical - playfully quaint or fanciful, especially in an appealing and amusing way<br>
-        Xenophobic - having or showing a dislike of or prejudice against people from other countries<br>
-        Yearning - a feeling of intense longing for something<br>
-        Zenith - the time at which something is most powerful or successful<br>
-        Ambivalent - having mixed feelings or contradictory ideas about something or someone<br>
-        Bellicose - demonstrating aggression and willingness to fight<br>
-        Complacent - showing smug or uncritical satisfaction with oneself or one's achievements<br>
-        Derisive - expressing contempt or ridicule<br>
-        Eloquent - fluent or persuasive in speaking or writing<br>
-        Flippant - not showing a serious or respectful attitude<br>
-        Gregarious - fond of company; sociable<br>
-        Harbinger - a person or thing that announces or signals the approach of another<br>
-        Impervious - not allowing fluid to pass through; unable to be affected by<br>
-        Jaded - tired, bored, or lacking enthusiasm, typically after having too much of something<br>
-        Knack - an acquired or natural skill at performing a task<br>
-        Loquacious - tending to talk a great deal; talkative<br>
-        Melancholy - a feeling of pensive sadness, typically with no obvious cause<br>
-        Nuance - a subtle difference in or shade of meaning, expression, or sound<br>
-        Onerous - involving a great deal of effort, difficulty, or expense<br>
-        Pithy - concise and forcefully expressive<br>
-        Quandary - a state of perplexity or uncertainty over what to do in a difficult situation<br>
-        Resolute - admirably purposeful, determined, and unwavering<br>
-        Sagacious - having or showing good judgement; shrewd<br>
-        Taciturn - (of a person) reserved or uncommunicative in speech; saying little<br>
-        Unassailable - unable to be attacked, questioned
-    </p>
+            Please Enter A Word : 
+            <input type="text" id="veri" value=""></input>
+            <button type="button" onclick="Search()">Search</button>
+            <p id="selector"></p>
 
-    <style>
-        p {
-            text-align:left;
-        }
-    </style>
+    <script>
 
+        content = {
+            "kabile": "Aynı atadan gelen ve birbirleri ile kan bağı bulunan insan topluluğu.",
+            "koloni": "İlk çağda bir devletin başka devletleri kendi topraklarına bağlamasıdır.",
+            "haldi": "Urartu tanrısıdır",
+            "teokrasi": "Bir devletin dini kurallara göre yönetilmesidir.",
+            "ensi": "Sümerlerde yöneticilerin din adamları olmasıdır",
+            "monarşi": "Ülkeyi tek bir kişinin yönetmesidir",
+            "oligarşi": "Ülkenin bir grup insan tarafından yönetilmesidir.",
+            "veba": "Ortaçağda avrupa nüfusunun çoğunu öldürmüştür. 4 yıl sürmüştür.",
+            "brahmalar": "Din adamlarıdır",
+            "ksatriyalar": "Askerlerdir",
+            "vaisyalar": "Çalışanlardır",
+            "sudralar": "Köleler ve işçilerdir",
+            "kast sistemi": "Hindistan'da bir kişinin toplumsal konumunun yaşamı boyunca belirlendiği toplumsal bir düzendir.",
+            "parya": "Kast sisteminde uzakta olan yerleşim yerine denir.",
+            "karum": "Asurlu tüccarların toplandığı semttir.",
+            "agora": "Ticari faaliyetlerin yapıldığı yerdir.",
+            "han": "Küçük kervanların indiği, yolcuların konakladığı yerdir.(Birden çok dükkan barındırırsa çarşı denir.)",
+            "arastalar": "Aynı esnaf grubuna ait dükkanların bir sokak üzerinde karşılıklı sıralanması ile meydana gelir.",
+            "ribat": "Korunma, karakol veya ordugah olarak kullanılmıştır. 11. yüzyıldan sonra ticari konaklama olarak",
+            "kervansaray": "Kervanların güvenliği ve konaklaması için ana yol kenarlarında olan tesislerdir.",
+            "kral yolu": "Batıda Sardis ve Efes'ten başlayarak (Türkiye'de İzmir'in 95 km kadar doğusunda), doğuya doğru şu anki Türkiye'nin orta kuzey kısmından Asur'un başkenti Ninova'ya (şu anki Musul, Irak) varmaktadır, daha sonra Babil'in şu anki Bağdat, Irak güneyine geçmektedir.",
+            "ziggurat": "Sümer döneminde rahiplerin yönettiği tapınaklardır. Birçok katı vardır.",
+            "hammurabi": "adaltein kralıdır.",
+            "firavunlar": "Mısır'da tanrı-kral anlayışıdır.",
+            "aristokratik yönetim": "soyluların devleti yönetmesidir",
+            "tiran": "yönetimi zorla ele geçiren kişilere denir.",
+            "satraplik": "eyalet sistemidir.",
+            "satrap": "Bir eyalet sistemini yöneten kişiye denir.",
+            "feodalizim": "Orta Çağ'da kralın siyasi gücünü toprak sahipleriyle paylaşmasıdır.",
+            "tarama": "Kaynak arama.",
+            "tashif": "Sınıflandırma.",
+            "tahlil": "Çözümleme",
+            "telkit": "Eleştirme.",
+            "terkip": "Sentez.",
+            "cografya": "Yer bilimidir.",
+            "arkeoloji": "Kazı bilimidir.",
+            "antropoloji": "Irkları inceleyerek sınıflandıran bilim dalıdır.",
+            "etnografya": "Kültür bilimidir.",
+            "hukuk": "Kurallar bilimidir.",
+            "kronoloji": "Takvim bilimidir, tarihi olayların oluş sırasını verir.",
+            "edebiyat": "Tarihte edebiyat, toplumların edebiyat alanındaki ürünlerine bakılarak o toplum hakkında fikirler elde etmektir.",
+            "felsefe": "Düşünme bilimidir.",
+            "paleografya": "Yazı bilimidir.",
+            "epigrafi": "Kitabeleri inceleyen bilim dalıdır.",
+            "sosyoloji": "Toplum bilimidir.",
+            "filoloji": "Dil bilimidir. Toplumların dillerini inceler",
+            "diplomatik": "Resmi kayitlar bilimidir.",
+            "numizmatik": "Eski paraları inceleyerek toplumların ekonomik yapısı hakkında bilgi verir.",
+            "istatistik": "Sayısal verilerle anlatma bilimidir.",
+            "ekoloji": "Çevre bilimidir.",
+            "kimya": "C14 metodunu kullanarak eski kullanılmış araç ve gereçlerin yaşları hakkında bilgi verir.",
+            "sanat tarihi": "Eserlerin sanatsal özelliklerini araştırır.",
+            "heraldik": "Mühür ve armaları inceleyen bilim dalıdır.",
+            "toponomi": "Yer isimlerini inceleyerek tarihe yardımcı olur.",
+            "on iki hayvanli türk takvimi": "Türklerin kullandığı ilk takvimdir.",
+            "hicri takvim": "Türklerin kullandığı ikinci takvimdir.",
+            "rumi takvim": "Türklerin kullandığı dördüncü takvimdir.",
+            "celali takvim": "Türklerin kullandığı üçüncü takvimdir.",
+            "miladi takvim": "Türklerin kullandığı beşinci takvimdir.",
+            "emmer buğday": "Üretilen ilk buğdaydır.",
+            "megaron": "İlk modern evlerdir.",
+            "mikrolit": "Obsidyenden yapılmış küçük ev eşyalarıdır.",
+            "gobeklitepe": "Şanlıurfa'da bulunur. İlk ibadet yeridir.",
+            "çatalhöyük": "Konya'da bulunur. İlk kent yerleşimidir.",
+            "çayönü": "Diyarbakır'da bulunur. Dünyanın ilk köyüdür.",
+            "mezapotamya": "Orta Doğu'da, Dicle ve Fırat nehirleri arasında kalan bölge.",
+            "bereketli hilal": "Mezapotamya'nın diğer ismidir.",
+            "tavananna": "Hititlerde yönetimde söz hakkı olan kraliçe.",
+            "nom": "Mısırlılarda şehir anlamına gelmektedir.",
+            "saltuklular": "Anadolu'da kurulan ilk turk beyligidir. Erzurum ve cevresinde kuruldu.",
+            "mengücekliler": "Erzincan ve cevresinde kuruldular.",
+            "danişmentliler": "Kayseri ve Sivas cevresinde kuruldu. Haclılara karsi savasmislardir. Selcuklu devleti ile en cok mücadele eden beyliktir.",
+            "artuklular": "Mardin ve Diyarbakir cevresinde kuruldular.",
+            "çaka beyliği": "Caka Bey tarafindan kurulmustur. Bizanslari yenerek Ege Adalarini ele gecirmistir. Ilk denizci Turk beyligidir.",
+            "araba": "Dört tekerli, motorlu küçük taşıt.",
+            "kitap": "Basılı ya da el yazılı kağıt yaprakların ciltli ya da ciltsiz olarak bir araya getirilmiş biçimi.",
+            "ekmek": "Bir bitki üretmek amacıyla toprağa tohum atmak, serpmek ya da gömmek.",
+            "sağlık": "Vücudun ve ruhun esenlik içinde bulunması durumu,esenlik.",
+            "açma": "açmak işi.",
+            "açlık": "Aç olm hali.",
+            "açılma": "Açılma işi.",
+            "beceri": "Elinden ş gelme durumu, başarı yapabilme.",
+            "çabalamak": "Bir işi başarmak için çok çalışmak,güç harcamak,uğraşmak.",
+            "yayınlamak": "Yazılı bir eserin çoğaltılması ve daha fazla insana ulaşmasını sağlamak anlamına gelir.",
+            "oynamak": "Hoşça vakit geçirme, eğlenme, oyalanma gibi amaçlarla bir şeyle, herhangi bir oyunla uğraşmak.",
+            "kazanmak": "Olumlu ve iyi bir sonuç sağlamak.",
+            "sürmek": "(At, araba vb. için) yönetip, kullanıp yürütmek.",
+            "yürümek": "Adım atarak ilerlemek.",
+            "tarih": "Bir olayın gününü, ayını ve yılını bildiren söz ya da rakam.",
+            "futbol": "Futbol, on birer oyuncudan oluşan iki takım arasında, kendine özgü küresel bir topla oynanan takım sporudur.",
+            "top": "Ayaktopu, sepettopu, masatopu gibi birçok spor oyunlarında kullanılan, genellikle kauçuktan yapılmış, türlü büyüklükte olabilen, toparlak nesne."}
+
+            
+            function Search() {
+                // x = document.getElementById("veri").value;
+                // y = document.querySelector("#selector")
+                // y.innerHTML = x
+
+                x = document.getElementById("veri").value;
+                y = document.querySelector("#selector")
+                y.innerHTML = content[x]
+            }
+            
+
+    </script>
 </body>
 
 </html>
